@@ -52,7 +52,7 @@ Powered by the Eclipse Platform: https://eclipse.dev/eclipse
 
    <splash
       location="org.eclipse.birt.branding"/>
-   <launcher name="birt">
+   <launcher name="sbdesigner">
       <win useIco="true">
          <ico path="images/birt.ico"/>
          <bmp/>
