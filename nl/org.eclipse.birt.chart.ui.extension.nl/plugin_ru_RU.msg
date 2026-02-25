@@ -1,0 +1,15 @@
+Series=Ряд данных
+ValueYSeries=Ряд значений (Ось Y)
+CategorySeries=Ряд категорий
+ValueSeries=Ряд значений
+Needle=Стрелка
+ChartArea=Область диаграммы
+Axis=Ось
+XAxis=Ось X
+YAxis=Ось Y
+ZAxis=Ось Z
+Plot=Диаграмма
+Legend=Легенда
+Title=Заголовок
+preference.chart.fieldassist=Подсказка для поля
+preference.chart.fieldassist.contentassist=Подсказка по содержимому

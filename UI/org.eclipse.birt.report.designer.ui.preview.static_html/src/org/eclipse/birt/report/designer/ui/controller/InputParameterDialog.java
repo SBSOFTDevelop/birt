@@ -110,8 +110,8 @@ public class InputParameterDialog extends Dialog {
 				Object paramValue = paramValues.get(paramName);
 				if (paramValue == null || (paramValue instanceof String && ((String) paramValue).equals(""))) //$NON-NLS-1$
 				{
-					MessageDialog.openError(parentShell, "Error", paramName //$NON-NLS-1$
-							+ " cannot be NULL or blank"); //$NON-NLS-1$
+					MessageDialog.openError(parentShell, "Ошибка", paramName //$NON-NLS-1$
+							+ " не может быть NULL или пустым"); //$NON-NLS-1$
 					return;
 
 				}
@@ -126,9 +126,9 @@ public class InputParameterDialog extends Dialog {
 
 				} catch (BirtException e) {
 					// TODO: handle exception
-					MessageDialog.openError(parentShell, "Invalid value type", //$NON-NLS-1$
-							"The value \"" //$NON-NLS-1$
-									+ paramValue + "\" is invalid with type " //$NON-NLS-1$
+					MessageDialog.openError(parentShell, "Неверный тип", //$NON-NLS-1$
+							"Значение \"" //$NON-NLS-1$
+									+ paramValue + "\" неверного типа " //$NON-NLS-1$
 									+ scalarParam.getHandle().getDataType());
 					return;
 				}
@@ -359,7 +359,7 @@ public class InputParameterDialog extends Dialog {
 	@Override
 	protected void configureShell(Shell newShell) {
 		super.configureShell(newShell);
-		newShell.setText("Input parameters"); //$NON-NLS-1$
+		newShell.setText("Ввод параметров"); //$NON-NLS-1$
 		newShell.setSize(400, 400);
 	}
 

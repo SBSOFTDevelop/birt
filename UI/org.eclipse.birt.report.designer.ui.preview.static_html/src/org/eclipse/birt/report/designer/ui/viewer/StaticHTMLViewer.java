@@ -79,7 +79,7 @@ import com.ibm.icu.util.ULocale;
 
 public class StaticHTMLViewer extends SWTAbstractViewer {
 
-	private static final String TITLE_MESSAGE = "Showing page {0} of {1}"; //$NON-NLS-1$
+	private static final String TITLE_MESSAGE = "Показана страница {0} из {1}"; //$NON-NLS-1$
 
 	private final HTMLRenderOption renderOption = new HTMLRenderOption();
 	private final EngineConfig engineConfig = new HyperlinkEngineConfig();
@@ -208,7 +208,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		form.getBody().setLayout(layout);
 
 		// Re-run the report action
-		reRunReportAction = new Action("Re-run the report", //$NON-NLS-1$
+		reRunReportAction = new Action("Перезапустить отчёт", //$NON-NLS-1$
 				Action.AS_PUSH_BUTTON) {
 
 			@Override
@@ -216,26 +216,26 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 				render();
 			}
 		};
-		reRunReportAction.setToolTipText("Re-run the report"); //$NON-NLS-1$
+		reRunReportAction.setToolTipText("Перезапустить отчёт"); //$NON-NLS-1$
 		reRunReportAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_RE_RUN));
 		form.getToolBarManager().add(reRunReportAction);
 
 		// paramAction
-		paramAction = new Action("Enter parameter", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		paramAction = new Action("Ввести параметры", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
 				render();
 			}
 		};
-		paramAction.setToolTipText("Open Parameters Dialog"); //$NON-NLS-1$
+		paramAction.setToolTipText("Открыть диалог параметров"); //$NON-NLS-1$
 		paramAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_PARAMS));
 		form.getToolBarManager().add(paramAction);
 
 		// tocAction
-		tocAction = new Action("TOC", Action.AS_RADIO_BUTTON) { //$NON-NLS-1$
+		tocAction = new Action("Содержание", Action.AS_RADIO_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -248,7 +248,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 				}
 			}
 		};
-		tocAction.setToolTipText("Show TOC"); //$NON-NLS-1$
+		tocAction.setToolTipText("Показать содержание"); //$NON-NLS-1$
 		tocAction.setImageDescriptor(
 				StaticHTMLPrviewPlugin.getDefault().getImageRegistry().getDescriptor(StaticHTMLPrviewPlugin.IMG_TOC));
 		tocAction.setChecked(false);
@@ -257,7 +257,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		form.getToolBarManager().add(new Separator());
 
 		// navFirstAction
-		navFirstAction = new Action("First", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		navFirstAction = new Action("Первая", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -265,13 +265,13 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 				renderWithoutAskingForParams();
 			}
 		};
-		navFirstAction.setToolTipText("First"); //$NON-NLS-1$
+		navFirstAction.setToolTipText("Первая страница"); //$NON-NLS-1$
 		navFirstAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_NAV_FIRST));
 		form.getToolBarManager().add(navFirstAction);
 
 		// navPreAction
-		navPreAction = new Action("Previous", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		navPreAction = new Action("Предыдущая", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -282,13 +282,13 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 			}
 		};
 
-		navPreAction.setToolTipText("Previous"); //$NON-NLS-1$
+		navPreAction.setToolTipText("Предыдущая страница"); //$NON-NLS-1$
 		navPreAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_NAV_PRE));
 		form.getToolBarManager().add(navPreAction);
 
 		// navNextAction
-		navNextAction = new Action("Next", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		navNextAction = new Action("Следующая", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -299,13 +299,13 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 			}
 		};
 
-		navNextAction.setToolTipText("Next"); //$NON-NLS-1$
+		navNextAction.setToolTipText("Следующая страница"); //$NON-NLS-1$
 		navNextAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_NAV_NEXT));
 		form.getToolBarManager().add(navNextAction);
 
 		// navLastAction
-		navLastAction = new Action("Last", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		navLastAction = new Action("Последняя", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -314,7 +314,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 			}
 		};
 
-		navLastAction.setToolTipText("Last"); //$NON-NLS-1$
+		navLastAction.setToolTipText("Последняя страница"); //$NON-NLS-1$
 		navLastAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_NAV_LAST));
 		form.getToolBarManager().add(navLastAction);
@@ -335,7 +335,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 				container.setLayout(layout);
 				Label label = new Label(container, SWT.NULL);
 				label.setFont(container.getFont());
-				label.setText("Go to page:"); //$NON-NLS-1$
+				label.setText("Перейти на страницу:"); //$NON-NLS-1$
 
 				goPageInput = toolkit.createText(container, "", SWT.BORDER); //$NON-NLS-1$
 				goPageInput.setFont(container.getFont());
@@ -375,15 +375,15 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 									}
 									navGoAction.setEnabled(true);
 								} else {
-									form.setMessage("Page Number '" //$NON-NLS-1$
-											+ page + "' is invalid!", //$NON-NLS-1$
+									form.setMessage("Номер страницы '" //$NON-NLS-1$
+											+ page + "' неверен!", //$NON-NLS-1$
 											IMessageProvider.ERROR);
 									isValid = false;
 									navGoAction.setEnabled(false);
 								}
 							} catch (NumberFormatException e1) {
-								form.setMessage("Page Number '" //$NON-NLS-1$
-										+ goPageInput.getText() + "' is invalid!", //$NON-NLS-1$
+								form.setMessage("Номер страницы '" //$NON-NLS-1$
+										+ goPageInput.getText() + "' неверен!", //$NON-NLS-1$
 										IMessageProvider.ERROR);
 								isValid = false;
 								navGoAction.setEnabled(false);
@@ -404,7 +404,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		form.getToolBarManager().add(inputText);
 
 		// navSelectAction
-		navGoAction = new Action("Go to page", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
+		navGoAction = new Action("Перейти", Action.AS_PUSH_BUTTON) { //$NON-NLS-1$
 
 			@Override
 			public void run() {
@@ -416,7 +416,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 			}
 		};
 
-		navGoAction.setToolTipText("Go to page"); //$NON-NLS-1$
+		navGoAction.setToolTipText("Перейти на страницу"); //$NON-NLS-1$
 		navGoAction.setImageDescriptor(StaticHTMLPrviewPlugin.getDefault().getImageRegistry()
 				.getDescriptor(StaticHTMLPrviewPlugin.IMG_NAV_GO));
 		form.getToolBarManager().add(navGoAction);
@@ -467,7 +467,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		layout.numColumns = 1;
 		toc.setLayout(new GridLayout());
 
-		toolkit.createLabel(toc, "Table of Contents:"); //$NON-NLS-1$
+		toolkit.createLabel(toc, "Содержание:"); //$NON-NLS-1$
 		Tree t = toolkit.createTree(toc, SWT.NULL);
 		t.setLayoutData(new GridData(GridData.FILL_BOTH));
 		tocViewer = new TreeViewer(t);
@@ -613,7 +613,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 			}
 		} else {
 			this.hasParas = false;
-			paramAction.setToolTipText("No Parameters"); //$NON-NLS-1$
+			paramAction.setToolTipText("Нет параметров"); //$NON-NLS-1$
 		}
 	}
 
@@ -638,7 +638,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		}
 		assignParamValues = false;
 
-		monitor.subTask("Collecting parameters"); //$NON-NLS-1$
+		monitor.subTask("Сбор параметров"); //$NON-NLS-1$
 		// getParameterValues( );
 
 		if (monitor.isCanceled()) {
@@ -646,7 +646,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 		}
 		monitor.worked(1);
 
-		monitor.subTask("Rendering report"); //$NON-NLS-1$
+		monitor.subTask("Генерация отчёта"); //$NON-NLS-1$
 		if (monitor.isCanceled()) {
 			return;
 		}
@@ -685,7 +685,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void setControlStatus() {
-		form.setText("Running report..."); //$NON-NLS-1$
+		form.setText("Выполнение отчёта..."); //$NON-NLS-1$
 		form.setBusy(true);
 
 		paramAction.setEnabled(false);
@@ -720,17 +720,17 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void initJob(RenderJobRule jobRule) {
-		Job initJob = new AbstractJob("Initialize engine", //$NON-NLS-1$
+		Job initJob = new AbstractJob("Инициализация движка", //$NON-NLS-1$
 				this.reportDesignFile) {
 
 			@Override
 			public void work(IProgressMonitor monitor) {
 				if (!isInitialize) {
-					monitor.subTask("Initialize engine"); //$NON-NLS-1$
+					monitor.subTask("Инициализация движка"); //$NON-NLS-1$
 					init();
 					isInitialize = true;
 				}
-				monitor.subTask("Prepair collect parameters"); //$NON-NLS-1$
+				monitor.subTask("Подготовка сбора параметров"); //$NON-NLS-1$
 				setParameters(getInputParameters(reportDesignFile));
 			}
 		};
@@ -738,12 +738,12 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void getParamValuesJob(RenderJobRule jobRule) {
-		Job getParameterJob = new AbstractUIJob("Collecting parameters", //$NON-NLS-1$
+		Job getParameterJob = new AbstractUIJob("Сбор параметров", //$NON-NLS-1$
 				this.reportDesignFile) {
 
 			@Override
 			public void work(IProgressMonitor monitor) {
-				monitor.subTask("Collecting parameters"); //$NON-NLS-1$
+				monitor.subTask("Сбор параметров"); //$NON-NLS-1$
 				getParameterValues(inputParameters);
 			}
 		};
@@ -752,7 +752,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void renderJob(RenderJobRule jobRule) {
-		Job renderJob = new AbstractJob("Rendering report", //$NON-NLS-1$
+		Job renderJob = new AbstractJob("Отрисовка отчета", //$NON-NLS-1$
 				this.reportDesignFile) {
 
 			@Override
@@ -765,12 +765,12 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void showReportOutputJob(RenderJobRule jobRule) {
-		Job showJob = new AbstractUIJob("Showing report", //$NON-NLS-1$
+		Job showJob = new AbstractUIJob("Показ отчета", //$NON-NLS-1$
 				this.reportDesignFile) {
 
 			@Override
 			public void work(IProgressMonitor monitor) {
-				monitor.subTask("Show report in Browser"); //$NON-NLS-1$
+				monitor.subTask("Показ отчета в браузере"); //$NON-NLS-1$
 				if (!form.isDisposed()) {
 					try {
 						String url = new File(outputLocation).toURI().toURL().toString();
@@ -802,7 +802,7 @@ public class StaticHTMLViewer extends SWTAbstractViewer {
 	}
 
 	private void updateFormJob(RenderJobRule jobRule) {
-		Job updateFormJob = new AbstractUIJob("Update", "") { //$NON-NLS-1$ //$NON-NLS-2$
+		Job updateFormJob = new AbstractUIJob("Обновление", "") { //$NON-NLS-1$ //$NON-NLS-2$
 
 			@Override
 			public void work(IProgressMonitor monitor) {

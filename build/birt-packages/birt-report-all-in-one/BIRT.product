@@ -278,8 +278,8 @@ United States, other countries, or both.
       <property name="eclipse.product" value="org.eclipse.birt.branding.birt_all_in_one"/>
       <property name="org.eclipse.update.reconcile" value="false"/>
       <property name="eclipse.application" value="org.eclipse.ui.ide.workbench"/>
-      <property name="osgi.instance.area.default" value="@user.home/workspace"/>
-      <property name="osgi.instance.area.default" value="@user.home/Documents/workspace" os="macosx"/>
+      <property name="osgi.instance.area.default" value="@user.home/шаблоны"/>
+      <property name="osgi.instance.area.default" value="@user.home/Documents/шаблоны" os="macosx"/>
    </configurations>
 
    <repositories>
