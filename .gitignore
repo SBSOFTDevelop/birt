@@ -10,3 +10,6 @@ build.log
 /org.eclipse.pde.build.*/
 /org.eclipse.jdt.debug.*/
 /org.eclipse.birt.report.viewer.*/
+.idea/
+*.iml
+*.iws
